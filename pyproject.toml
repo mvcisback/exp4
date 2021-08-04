@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "exp4"
 readme="README.md"
-version = "0.1.0"
+version = "0.1.1"
 description = "Implementation of Exponential weighting for Exploration and Exploitation with Experts."
 authors = ["Marcell Vazquez-Chanlatte <mvc@linux.com>"]
 license = "MIT"

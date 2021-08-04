@@ -48,7 +48,7 @@ advice = [
     [1/3, 1/3, 1/3],  # Expert 1 
     [2/3, 1/3, 0],    # Expert 2
 ]
-arm = player.send((None, advice))
+arm = player.send((loss, advice))
 assert arm in range(3)
 
 loss = 1 / (1 + arm)  # Arbitrary loss assigned to arm.

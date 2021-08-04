@@ -5,7 +5,7 @@ import numpy as np
 from scipy.special import softmax
 
 
-__all__ = ['Advice', 'Player', 'exp4']
+__all__ = ['Arm', 'Loss', 'Advice', 'Player', 'exp4']
 
 
 Arm = Any
@@ -35,7 +35,7 @@ def exp4(noise_coeff: float = 0) -> Player:
       - Advice is a num_experts × num_arms matrix (rows should sum to 1).
     """
     player = _exp4(noise_coeff)
-    next(player)
+    next(player)  # Initialize co-routine.
     return player
 
 

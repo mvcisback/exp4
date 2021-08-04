@@ -1,6 +1,8 @@
 # EXP4 
 A python implementation of Exponential weighting for Exploration and Exploitation with Experts. Based on [this blog post](https://banditalgs.com/2016/10/14/exp4/).
 
+This algorithm is useful for non-stochastic Contextual Multi Armed Bandits.
+
 [![Build Status](https://cloud.drone.io/api/badges/mvcisback/exp4/status.svg)](https://cloud.drone.io/mvcisback/exp4)
 [![PyPI version](https://badge.fury.io/py/exp4.svg)](https://badge.fury.io/py/exp4)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

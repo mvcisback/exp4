@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "exp4"
 readme="README.md"
-version = "0.1.2"
+version = "0.1.3"
 description = "Implementation of Exponential weighting for Exploration and Exploitation with Experts."
 authors = ["Marcell Vazquez-Chanlatte <mvc@linux.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.10"
+python = "^3.9"
 numpy = "^1.21.1"
 scipy = { version = "^1.7.1", python = "<3.10" }
 

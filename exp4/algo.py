@@ -2,7 +2,16 @@ import random
 from typing import Any, Generator, Optional, Sequence
 
 import numpy as np
-from scipy.special import softmax
+
+try:
+    from scipy.special import softmax
+except ImportError:
+    def logsumexp(x):
+        offset = x.max()
+        return offset + np.log(np.exp(x - offset).sum())
+
+    def softmax(x):
+        return np.exp(x - logsumexp(x))
 
 
 __all__ = ['Arm', 'Loss', 'Advice', 'Player', 'exp4']
@@ -57,7 +66,7 @@ def _exp4(noise_coeff: float) -> Player:
             assert 0 <= loss <= 1
 
             # Compute Expert rewards.
-            arm_prob = expert_weights[expert] * advice[expert, arm]
+            arm_prob = expert_weights[expert] * prev_advice[expert, arm]
             rewards = np.zeros(num_arms)
             rewards[arm] = (1 - loss) / arm_prob
             rewards = prev_advice @ rewards

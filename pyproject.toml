@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "exp4"
 readme="README.md"
-version = "0.1.1"
+version = "0.1.2"
 description = "Implementation of Exponential weighting for Exploration and Exploitation with Experts."
 authors = ["Marcell Vazquez-Chanlatte <mvc@linux.com>"]
 license = "MIT"
@@ -9,7 +9,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = ">=3.9,<3.10"
 numpy = "^1.21.1"
-scipy = "^1.7.1"
+scipy = { version = "^1.7.1", python = "<3.10" }
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"

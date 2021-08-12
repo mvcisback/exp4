@@ -43,6 +43,8 @@ The protocol is as follows:
 An example is given below.
 
 ```python
+from exp4 import exp4
+
 player = exp4()
 
 loss = None           # Will be ignored.
